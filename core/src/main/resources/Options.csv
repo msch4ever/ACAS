@@ -1,0 +1,31 @@
+Load type,y0,y1,y2
+Accidental load,0,0,0
+Aerodynamic effects,"0,8","0,5",0
+CF(HSLM),"0,8","0,8",0
+CF(LM71)H,"0,8","0,8",0
+CF(LM71)V,"0,8","0,8",0
+CF(SW/0),"0,8","0,8",0
+CF(SW/2),0,1,0
+CF(UT),1,1,1
+Construction loads,1,,1
+Dead load,0,0,0
+Footpaths load,"0,8","0,5",0
+Hor. Earth pressure,"0,8","0,8",0
+HSLM,"0,8","0,8",0
+LM 71,"0,8","0,8",0
+Nosing forces,1,"0,8",0
+Real trains,"0,8","0,8",0
+Settlement,1,1,1
+Snow loads,"0,8",,0
+SW/0,"0,8","0,8",0
+SW2,0,1,0
+T&B(HSLM),"0,8","0,8",0
+T&B(LM71)A,"0,8","0,8",0
+T&B(LM71)B,"0,8","0,8",0
+T&B(SW/0),"0,8","0,8",0
+T&B(SW/2),0,1,0
+T&B(UT),1,1,1
+Thermal actions,"0,6","0,6","0,5"
+Unloaded train,1,1,1
+Wind forces Fw**,1,0,0
+Wind forces Fwk,"0,6","0,5",0

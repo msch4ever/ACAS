@@ -1,4 +1,4 @@
-package base;
+package base.domain.constants;
 
 import java.util.Arrays;
 
