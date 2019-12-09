@@ -9,26 +9,46 @@ import java.util.stream.Collectors;
 
 public class OptionReader {
 
+    private static final String LOAD_TYPES = "LoadTypes.csv";
+    private static final String EQU_A = "EQU_A.csv";
+    private static final String STR_GEO_B_1 = "STR_GEO_B_1.csv";
+    private static final String STR_GEO_B_2 = "STR_GEO_B_2.csv";
+    private static final String STR_GEO_B_3 = "STR_GEO_B_3.csv";
+    private static final String STR_GEO_C = "STR_GEO_C.csv";
+
     @SneakyThrows
     public List<LoadType> createLoadTypesFromOptions() {
-        List<List<String>> options = getParsedValues();
+        List<List<String>> options = getParsedValues(LOAD_TYPES);
         validateValues(options);
         return createLoadTypes(options.subList(1, options.size()));
     }
 
-    private List<List<String>> getParsedValues() throws Exception {
+    public void enrichLoadTypesWithDesignSituations(List<LoadType> types) {
+        enrichWtihSingleDesignSituation(types, EQU_A);
+        enrichWtihSingleDesignSituation(types, STR_GEO_B_1);
+        enrichWtihSingleDesignSituation(types, STR_GEO_B_2);
+        enrichWtihSingleDesignSituation(types, STR_GEO_B_3);
+        enrichWtihSingleDesignSituation(types, STR_GEO_C);
+    }
+
+    @SneakyThrows
+    private void enrichWtihSingleDesignSituation(List<LoadType> types, String designSituationFileName) {
+        List<List<String>> options = getParsedValues(designSituationFileName);
+    }
+
+    private List<List<String>> getParsedValues(String fileName) throws Exception {
         return FileParser.parseFile(Paths
-                .get(ClassLoader.getSystemClassLoader().getResource("Options.csv").toURI())).stream()
+                .get(ClassLoader.getSystemClassLoader().getResource(fileName).toURI())).stream()
                 .map(FileParser::getParsedCsvLine)
                 .collect(Collectors.toList());
     }
 
     private void validateValues(List<List<String>> options) {
         assert options.stream().noneMatch(row -> row.size() != 4);
-        validateHeader(options.get(0));
+        validateLoadTypesHeader(options.get(0));
     }
 
-    private void validateHeader(List<String> header) {
+    private void validateLoadTypesHeader(List<String> header) {
         assert header.get(0).equalsIgnoreCase("Load type");
         assert header.get(1).equalsIgnoreCase("y0");
         assert header.get(2).equalsIgnoreCase("y1");

@@ -1,0 +1,31 @@
+Load type,g_Gsup,g_Q1,g_Qi
+Accidental load,-,-,-
+Aerodynamic effects,-,"1,2","1,2"
+CF(HSLM),-,"1,16","1,16"
+CF(LM71)H,-,"1,16","1,16"
+CF(LM71)V,-,"1,16","1,16"
+CF(SW/0),-,"1,16","1,16"
+CF(SW/2),-,0,0
+CF(UT),-,"1,45","1,45"
+Construction loads,-,"1,45","1,45"
+Dead load,"1,35",-,-
+Footpaths load,-,"1,08","1,08"
+Hor. Earth pressure,-,"1,2","1,2"
+HSLM,-,"1,16","1,16"
+LM 71,-,"1,16","1,16"
+Nosing forces,-,"1,5","1,5"
+Real trains,-,"1,16","1,16"
+Settlement,"1,35",-,-
+Snow loads,-,-,-
+SW/0,-,"1,16","1,16"
+SW2,-,0,0
+T&B(HSLM),-,"1,16","1,16"
+T&B(LM71)A,-,"1,16","1,16"
+T&B(LM71)B,-,"1,16","1,16"
+T&B(SW/0),-,"1,16","1,16"
+T&B(SW/2),-,0,0
+T&B(UT),-,"1,45","1,45"
+Thermal actions,-,"0,9","0,9"
+Unloaded train,-,"1,45","1,45"
+Wind forces Fw**,-,"1,5","1,5"
+Wind forces Fwk,-,"0,9","0,9"
